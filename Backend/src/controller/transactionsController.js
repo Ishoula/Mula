@@ -63,9 +63,8 @@ export async function getTransactionSummary(req, res) {
     `;
 
   res.status(200).json({
-    balance: balanceResult[0].balance,
-    income: incomeResult[0].income,
-    expenses: expensesResult[0].expenses,
+    balance: parseFloat(balanceResult[0].balance) || 0,
+    income: parseFloat(incomeResult[0].income) || 0,
+    expenses: parseFloat(expensesResult[0].expenses) || 0,
   });
-
 }
