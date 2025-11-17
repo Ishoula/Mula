@@ -1,8 +1,8 @@
 import { useState, useCallback } from "react";
 import { Alert } from "react-native";
+import { API_URL } from "../constants/api";
 
 //react custom hook file
-const API_URL="http://localhost:2701/api"
 export const useTransactions = (userId) => {
   const [transactions, setTransactions] = useState([]);
   const [summary, setSummary] = useState({
